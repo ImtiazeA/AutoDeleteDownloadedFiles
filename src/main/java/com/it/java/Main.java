@@ -9,8 +9,7 @@ public class Main {
 
     public static void main(String[] args) throws IOException {
 
-        Path pathToFolder = Paths.get("E:\\");
-
+        Path pathToFolder = Paths.get("C:\\Users\\W10\\Downloads");
         Files.walkFileTree(pathToFolder, new AccessFiles());
 
     }
