@@ -19,8 +19,7 @@ public class AccessFiles implements FileVisitor<Path> {
         if (attrs.isRegularFile()) {
             long lastAccessTime = attrs.lastAccessTime().toMillis();
             long timeDifference = System.currentTimeMillis() - lastAccessTime;
-            long monthInMillis = 0;
-//            long monthInMillis = 24 * 60 * 60 * 1000;
+            long monthInMillis = 24 * 60 * 60 * 1000;
 
             if (timeDifference > 2 * monthInMillis) {
                 delete(pathToFile);
